@@ -1,3 +1,36 @@
-body {
-  font-family: 'Raleway', sans-serif;
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+}
+.navPading{
+    padding: 0 3rem 0 3rem;
+}
+.logoNav{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+.lineaBorder{
+    border-bottom: 2px solid #085159;
+}
+.texto{
+    line-height: 1.8;
+    font-weight: 300;
+}
+h2{
+    font-weight: 700;
+}
+h4{
+    font-weight: 700;
+}
+i{
+    color: #fff;
+}
+@media(max-width:575px){
+    #Quienes{display: none;}
+}/*se desaparece la seccion a tamaños pequeños*/
+.nav-color{
+    background-color: #1BAFBF;
+    transition:0.5s ease;
 }
