@@ -1,140 +1,266 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Camila Ruiz y Angela Mediavilla">
+    <meta name="author" content="Angela Mediavilla y Camila Ruiz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--JS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!--Fontawesome-->
+    <!--Integración fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
-    <!--Mi Css-->
+    <!--Integración Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--CSS propio-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Viajes Marisol</title>
-  </head>
+    <title>Viajes Chile</title>
+</head>
+<body>
 
-  <body>
-    <!--Carrusel-->
-    <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
-          </div>
+    <!--NavBar-->
+    <nav class="navbar nav-color navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid navPading">
+            <img class="logoNav px-1" src="assets/img/viajes.svg" alt="logo-viajes-chile">
+            <a class="navbar-brand" href="#">Viajes Chile</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse smooth-scroll" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Quienes">Quienes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Destacados">Destacados</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+    </nav>
+
+
+    <!--Slider-->
+    <header id="Inicio">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="Alpacas">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="Moais">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="Pinguino">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+        </div>
     </header>
 
-    <!--Tres columnas quienes somos-->
-    <div class="container-fluid bg-dark">
-      <div class="container bg-dark text-light text-center py-5">
-        <h2>¿Quiénes somos?</h2>
-        <div class="card-deck py-5 text-dark">
-          <div class="card text-dark">
-            <div class="card-body py-4">
-              <button type="button" class="btn btn-info">Poner Ícono</button>
-              <p class="card-text text-left py-4">It is a long established fact that a reader will be distracted by the readable content of you a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+    <!--Quienes Somos-->
+    <section id="Quienes" class="text-white">
+        <div class="containter-fluid">
+            <div class="col-12">
+                <h2 class="text-center my-5 lineaBorder pb-5">¿Quiénes somos?</h2>
+                <div class="row texto">
+                    <div class="col-md-4">
+                        <p class="bg-info text-center py-2 rounded-lg"><i class="fas fa-plane-departure fa-2x"></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut unde, porro aperiam ipsam ea suscipit deserunt expedita, quis modi minima est error natus consequatur fugiat veritatis qui quae necessitatibus?
+                        Dignissimos tenetur culpa eum totam consequatur modi? Ratione in optio ducimus accusamus consequatur dolore illum rem? Dolorum earum aliquam quas commodi asperiores deserunt atque corrupti, fugiat eius ratione, inventore odio.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut unde, porro aperiam ipsam ea suscipit deserunt expedita, quis modi minima est error natus consequatur fugiat veritatis qui quae necessitatibus?
+                        Dignissimos tenetur culpa eum totam consequatur modi? Ratione in optio ducimus accusamus consequatur dolore illum rem? Dolorum earum aliquam quas commodi asperiores deserunt atque corrupti, fugiat eius ratione, inventore odio.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut unde, porro aperiam ipsam ea suscipit deserunt expedita, quis modi minima est error natus consequatur fugiat veritatis qui quae necessitatibus?
+                        Dignissimos tenetur culpa eum totam consequatur modi? Ratione in optio ducimus accusamus consequatur dolore illum rem? Dolorum earum aliquam quas commodi asperiores deserunt atque corrupti, fugiat eius ratione, inventore odio.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut unde, porro aperiam ipsam ea suscipit deserunt expedita, quis modi minima est error natus consequatur fugiat veritatis qui quae necessitatibus?
+                        Dignissimos tenetur culpa eum totam consequatur modi? Ratione in optio ducimus accusamus consequatur dolore illum rem? Dolorum earum aliquam quas commodi asperiores deserunt atque corrupti, fugiat eius ratione, inventore odio.</p>
+                        <p class="bg-info text-center py-2 rounded-lg"><i class="fas fa-mountain fa-2x"></i></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="bg-info text-center py-2 rounded-lg"><i class="fas fa-map-marked-alt fa-2x"></i></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut unde, porro aperiam ipsam ea suscipit deserunt expedita, quis modi minima est error natus consequatur fugiat veritatis qui quae necessitatibus?
+                        Dignissimos tenetur culpa eum totam consequatur modi? Ratione in optio ducimus accusamus consequatur dolore illum rem? Dolorum earum aliquam quas commodi asperiores deserunt atque corrupti, fugiat eius ratione, inventore odio.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut unde, porro aperiam ipsam ea suscipit deserunt expedita, quis modi minima est error natus consequatur fugiat veritatis qui quae necessitatibus?
+                        Dignissimos tenetur culpa eum totam consequatur modi? Ratione in optio ducimus accusamus consequatur dolore illum rem? Dolorum earum aliquam quas commodi asperiores deserunt atque corrupti, fugiat eius ratione, inventore odio.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card text-dark">
-            <div class="card-body py-4">
-              <button type="button" class="btn btn-info">Poner Ícono</button>
-              <p class="card-text text-left py-4">It is a long established fact that a reader will be distracted by the readable content of you a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            </div>
-          </div>
-          <div class="card text-dark">
-            <div class="card-body py-4">
-              <button type="button" class="btn btn-info">Poner Ícono</button>
-              <p class="card-text text-left py-4">It is a long established fact that a reader will be distracted by the readable content of you a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            </div>
-          </div>
         </div>
-      </div>
+    </section>
+
+
+    <!--Destacados-->
+    <section id="Destacados">
+        <div class="container-fluid text-white mb-3">
+            <div class="col-12">
+                <h2 class="text-center my-5 lineaBorder pb-5 pt-3">Destacados</h2>
+            </div>
+                <div class="card-deck mt-5 mb-5 texto">
+                    <div class="card bg-info">
+                        <img src="assets/img/card1.jpg" class="card-img-top" alt="Lago">
+                        <div class="card-body">
+                            <h4 class="card-title">Lorem, ipsum dolor sit amet </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quasi corrupti. Labore, aspernatur aliquam</p>
+                            <button type="button" class="btn btn-light mt-4" data-toggle="modal" data-target="#lago">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="card bg-info">
+                        <img src="assets/img/card2.jpg" class="card-img-top" alt="Montaña">
+                        <div class="card-body">
+                            <h4 class="card-title">Consectetur adipisicing elit</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quasi corrupti. Labore, aspernatur aliquam</p>
+                            <button type="button" class="btn btn-light mt-4" data-toggle="modal" data-target="#montaña">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="card bg-info">
+                        <img src="assets/img/card3.jpg" class="card-img-top" alt="Norte Salar">
+                        <div class="card-body">
+                            <h4 class="card-title">Send do euismod rempor</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quasi corrupti. Labore, aspernatur aliquam</p>
+                            <button type="button" class="btn btn-light mt-4" data-toggle="modal" data-target="#salar">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="card bg-info">
+                        <img src="assets/img/card4.jpg" class="card-img-top" alt="Bosque Sur">
+                        <div class="card-body">
+                            <h4 class="card-title">Ut enim ad minim veniam</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quasi corrupti. Labore, aspernatur aliquam</p>
+                            <button type="button" class="btn btn-light mt-4" data-toggle="modal" data-target="#bosque">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+<div class="modal fade" id="lago" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Lagos de Chile</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/card1.jpg" class="img-fluid my-2" alt="Lago">
+                <h4 class="my-2">Conoce los lagos de Chile</h4>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+
+            </div>
+        </div>
     </div>
+</div>
 
-    <!--Cuatro columnas destacado-->
-    <div class="container-fluid bg-dark">
-      <div class="container bg-dark text-light text-center py-2">
-        <h2>Destacados</h2>
-          <div class="row row-cols-1 row-cols-md-3 py-5 text-dark">
-            <div class="col mb-4">
-              <div class="card bg-info text-light">
-                <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-left">
-                  <h5 class="card-title">Playa Escondida</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
+<div class="modal fade" id="montaña" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Cumbres de Chile</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             </div>
-            <div class="col mb-4">
-              <div class="card bg-info text-light">
-                <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-left">
-                  <h5 class="card-title">Laguna Turquesa</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
+            <div class="modal-body">
+                <img src="assets/img/card2.jpg" class="img-fluid my-2" alt="Lago">
+                <h4 class="my-2">Recorre las cumbres más altas</h4>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+
             </div>
-            <div class="col mb-4">
-              <div class="card bg-info text-light">
-                <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-left">
-                  <h5 class="card-title">Salar Atacama</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col mb-4">
-              <div class="card bg-info text-light">
-                <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-left">
-                  <h5 class="card-title">Bosque Encantado</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
+        </div>
     </div>
+</div>
+
+<div class="modal fade" id="salar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Salar del Norte</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/card3.jpg" class="img-fluid my-2" alt="Lago">
+                <h4 class="my-2">Los salares más impresionantes del mundo</h4>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="bosque" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Bosques de Chile</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/img/card4.jpg" class="img-fluid my-2" alt="Lago">
+                <h4 class="my-2">Los mejores senderos del sur de Chile</h4>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+                <p class="texto mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, doloremque laboriosam? Quod itaque optio assumenda dicta. Odit reprehenderit at odio modi nam. Delectus ea recusandae magni nobis, quo porro reprehenderit.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <!--jQuery 3.6.0 sin slim-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <!-- Popper 1.16.1 -->
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <!--Contacto-->
+    <section id="Contacto">
+        <div class="container-fluid text-white">
+            <h2 class="text-center my-5 lineaBorder pb-5 pt-3">Contacto</h2>
+                <div class="container">
+                    <div class="typeform-widget" data-url="https://form.typeform.com/to/DaWZUwLS?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+                </div>
+        </div>
+    </section>
 
-    <!-- Bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-    <!-- Mi script-->
-    <script src="assets/js/script.js"> </script>
+    <!--Footer-->
+    <footer class="bg-info row text-white">
+        <h4 class="col-md-6 text-center my-3">VIAJES CHILE</h4>
+            <div class="col-md-6 text-center my-3">
+                <a href="https://github.com"><i class="fab fa-github-square fa-2x pr-2"></i></a>
+                <a href="https://www.linkedin.com"><i class="fab fa-linkedin fa-2x pr-2"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter-square fa-2x pr-2"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook-square fa-2x"></i></a>
+            </div>
+    </footer>
 
-  </body>
+<!--Integración Jquery, Popper, Bootstrap y Js-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
 </html>
